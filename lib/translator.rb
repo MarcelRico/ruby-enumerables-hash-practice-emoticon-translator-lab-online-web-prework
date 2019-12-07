@@ -5,7 +5,7 @@ def load_library(filepath)
   all_emoticons = YAML.load_file(filepath)
   emoticons = {}
   all_emoticons.map do |values|
-    pp values
+    pp values[0]
   end
   return emoticons
 end
