@@ -28,6 +28,6 @@ def get_japanese_emoticon(filepath,emoticon)
   lookup_value == nil ? (return "Sorry, that emoticon was not found") : (return lookup_value)
 end
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning(filepath,emoticon)
+  emoticons = load_library(filepath)
 end
