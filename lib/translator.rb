@@ -12,7 +12,9 @@ def load_library(filepath)
   
   # Add keys and values to get_emoticon hash
   all_emoticons.map do |values|
-    pp values[1][0]
+    english_emoticon = values[1][0]
+    japanese_emoticon = values[1][1]
+    emoticons[:get_emoticon][english_emoticon] = japanese_emoticon
   end
   
   
