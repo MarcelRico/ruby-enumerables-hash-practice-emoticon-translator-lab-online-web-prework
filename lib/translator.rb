@@ -7,7 +7,9 @@ def load_library(filepath)
   
   # Add keys and values to get_meaning hash
   all_emoticons.map do |values|
-    emoticons[:get_meaning][(values[1][1])] = values[0]
+    japanese_emoticon = values[1][1]
+    english_meaning = values[0]
+    emoticons[:get_meaning][(japanese_emoticon)] = english_meaning
   end
   
   # Add keys and values to get_emoticon hash
@@ -17,8 +19,6 @@ def load_library(filepath)
     emoticons[:get_emoticon][english_emoticon] = japanese_emoticon
   end
   
-  
-  pp emoticons
   return emoticons
 end
 
